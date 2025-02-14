@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Component from "@/components/StickyNavBar";
 import HeroGeometric from "@/components/GeometricHero";
+import CustomerTestimonials from "@/components/CustomerTestimonials";
 
 export default function Home() {
   return (
@@ -182,7 +183,7 @@ export default function Home() {
         </section>
 
         <Separator className="my-12" />
-
+        <CustomerTestimonials/>
         <section className="container py-12 md:py-24 items-center mx-auto lg:py-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

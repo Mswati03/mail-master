@@ -1,86 +1,60 @@
 import { Separator } from "@/components/ui/separator"
+import { MountainIcon, MailIcon, MapPinIcon, TwitterIcon, FacebookIcon, InstagramIcon, LinkedinIcon } from "lucide-react"
 import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="border-t bg-background ">
-      <div className="container flex flex-col gap-10 py-16">
-        <div className="grid grid-cols-2 gap-12 md:grid-cols-4">
-          <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-semibold">Product</h3>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Email Campaigns
+    <footer className="text-muted-foreground py-12 md:py-16 lg:py-20 i ">
+    <div className="  w-full  container grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 md:gap-12 lg:gap-16 items-center mx-auto ">
+      <div className="flex flex-col items-start gap-4">
+        <Link href="/" className="flex items-center gap-2" prefetch={false}>
+          <MailIcon className="h-6 w-6 text-primary" />
+          <span className="text-lg font-semibold">Mail Master</span>
+        </Link>
+        <p className="text-sm leading-relaxed">
+          Mail Master is a leading provider of email marketing services for businesses of all sizes.
+        </p>
+      </div>
+      <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+        <div className="space-y-2">
+          <h5 className="text-sm font-semibold">Products</h5>
+          <nav className="space-y-1">
+            
+            <Link href="/" className="text-sm hover:underline" prefetch={false}>
+              Email Marketing
             </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Templates
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Automation
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Analytics
-            </Link>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-semibold">Company</h3>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
+          </nav>
+        </div>
+        <div className="space-y-2">
+          <h5 className="text-sm font-semibold">Company</h5>
+          <nav className="space-y-1 inline-block">
+            <Link href="#" className="text-sm hover:underline" prefetch={false}>
               About
             </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Blog
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Careers
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Contact
-            </Link>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-semibold">Legal</h3>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Privacy
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Terms
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Cookie Policy
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Licenses
-            </Link>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-semibold">Social</h3>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Twitter
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              GitHub
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Discord
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              LinkedIn
-            </Link>
-          </div>
-        </div>
-        <Separator />
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} MailMaster. All rights reserved.</p>
-          <div className="flex gap-4">
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Terms of Service
-            </Link>
-          </div>
+           
+          </nav>
         </div>
       </div>
-    </footer>
-  )
+      <div className="space-y-4 md:space-y-6 lg:space-y-8">
+        <div className="space-y-1">
+          <h5 className="text-sm font-semibold">Contact</h5>
+          <p className="text-sm">
+            <MailIcon className="mr-2 inline-block h-4 w-4" />
+            admin@mailmaster.co.ls
+          </p>
+          <p className="text-sm">
+            <MapPinIcon className="mr-2 inline-block h-4 w-4" />
+            Maseru,Lesotho
+          </p>
+        </div>
+      
+      </div>
+     
+      
+    </div>
+    <div className="mt-12 border-t border-muted-foreground/20 pt-6 text-center text-sm">
+      <p>&copy; 2025 Mail Master. All rights reserved.</p>
+    </div>
+  </footer>  )
 }
 
