@@ -15,26 +15,7 @@ export function Footer() {
           Mail Master is a leading provider of email marketing services for businesses of all sizes.
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-8">
-        <div className="space-y-2">
-          <h5 className="text-sm font-semibold">Products</h5>
-          <nav className="space-y-1">
-            
-            <Link href="/" className="text-sm hover:underline" prefetch={false}>
-              Email Marketing
-            </Link>
-          </nav>
-        </div>
-        <div className="space-y-2">
-          <h5 className="text-sm font-semibold">Company</h5>
-          <nav className="space-y-1 inline-block">
-            <Link href="#" className="text-sm hover:underline" prefetch={false}>
-              About
-            </Link>
-           
-          </nav>
-        </div>
-      </div>
+      
       <div className="space-y-4 md:space-y-6 lg:space-y-8">
         <div className="space-y-1">
           <h5 className="text-sm font-semibold">Contact</h5>
