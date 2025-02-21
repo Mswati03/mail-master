@@ -1,13 +1,20 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import Link from "next/link";
 
 export default function RegisterPage() {
   const [email, setEmail] = useState("");
@@ -19,7 +26,7 @@ export default function RegisterPage() {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
+
     try {
       const { error } = await supabase.auth.signUp({
         email,
@@ -45,9 +52,18 @@ export default function RegisterPage() {
           <div className="flex items-center justify-center mb-4">
             <Mail className="h-8 w-8 text-primary" />
           </div>
-          <CardTitle className="text-2xl text-center">Create an account</CardTitle>
-          <CardDescription className="text-center">
-            Enter your email to create your account
+          <CardTitle className="text-center mt-6 text-3xl font-bold tracking-tight">
+            <h2 className="">Create your MailMaster account</h2>
+          </CardTitle>
+          <CardDescription className="text-center mt-2 text-sm text-muted-foreground">
+            Or{" "}
+            <Link
+              href="/signin"
+              className="font-medium text-primary hover:underline inline-block"
+            >
+              Sign in to your existing account
+              <ArrowRight className="inline-block h-4 w-4" />
+            </Link>{" "}
           </CardDescription>
         </CardHeader>
         <CardContent>

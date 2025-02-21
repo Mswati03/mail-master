@@ -7,7 +7,12 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Toggle } from "@/components/ui/toggle";
-import { Sheet, SheetTrigger, SheetContent , SheetTitle} from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import {
   Menu,
   MoonIcon,
@@ -30,7 +35,7 @@ export default function Component() {
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
           {" "}
           <Link
-            href="#features"
+            href="features"
             className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
             prefetch={false}
           >
@@ -38,7 +43,7 @@ export default function Component() {
             Features{" "}
           </Link>{" "}
           <Link
-            href="#pricing"
+            href="pricing"
             className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
             prefetch={false}
           >
@@ -46,26 +51,25 @@ export default function Component() {
             Pricing{" "}
           </Link>{" "}
           <Link
-            href="#integrations"
+            href="integrations"
             className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
             prefetch={false}
           >
             {" "}
             Integrations{" "}
           </Link>{" "}
-          
-          
         </nav>
         <div className="flex items-center gap-4">
- 
-          
-                <Link href="/register">
-              <Button variant="ghost" className="rounded-full hover:text-blue-600 ">
-               Get Started  <ArrowRight className="ml-3"/>
-                <span className="sr-only">Search</span>
-              </Button>
-              </Link>
-         
+          <Link href="/auth/register">
+            <Button
+              variant="ghost"
+              className="rounded-full hover:text-blue-600 "
+            >
+              Get Started <ArrowRight className="ml-3" />
+              <span className="sr-only">Search</span>
+            </Button>
+          </Link>
+
           <Sheet>
             <SheetTrigger asChild>
               <Button
@@ -78,43 +82,33 @@ export default function Component() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="md:hidden">
-                <SheetTitle>Links</SheetTitle>
+              <SheetTitle>Links</SheetTitle>
               <div className="grid gap-4 p-4">
+                {" "}
                 <Link
-                  href="#"
-                  className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                  href="features"
+                  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                   prefetch={false}
                 >
-                  Dashboard
-                </Link>
+                  {" "}
+                  Features{" "}
+                </Link>{" "}
                 <Link
-                  href="#"
-                  className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                  href="pricing"
+                  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                   prefetch={false}
                 >
-                  Campaigns
-                </Link>
+                  {" "}
+                  Pricing{" "}
+                </Link>{" "}
                 <Link
-                  href="#"
-                  className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                  href="integrations"
+                  className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                   prefetch={false}
                 >
-                  Analytics
-                </Link>
-                <Link
-                  href="#"
-                  className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                  prefetch={false}
-                >
-                  Contacts
-                </Link>
-                <Link
-                  href="#"
-                  className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                  prefetch={false}
-                >
-                  Settings
-                </Link>
+                  {" "}
+                  Integrations{" "}
+                </Link>{" "}
               </div>
             </SheetContent>
           </Sheet>
