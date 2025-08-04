@@ -13,7 +13,6 @@ import { Label } from "@/components/ui/label";
 import { ArrowRight, Mail } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import Link from "next/link";
 
 export default function RegisterPage() {
@@ -21,23 +20,22 @@ export default function RegisterPage() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const supabase = createClientComponentClient();
+  
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      const { error } = await supabase.auth.signUp({
+      /*const { error } = await supabase.auth.signUp({
         email,
         password,
         options: {
           emailRedirectTo: `${window.location.origin}/auth/callback`,
         },
-      });
+      });*/
 
-      if (error) throw error;
-      router.push("/dashboard");
+     router.push("/dashboard")
     } catch (error) {
       console.error("Error registering:", error);
     } finally {
