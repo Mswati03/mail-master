@@ -1,14 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  BarChart3,
-  Mail,
-  MenuIcon,
-  Settings,
-  Users,
-  X,
-} from "lucide-react";
+import { BarChart3, Mail, MenuIcon, Settings, Users, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -115,7 +108,7 @@ export default function DashboardLayout({
       </div>
 
       <div className="lg:pl-64">
-        <main className="py-6 px-4 sm:px-6 lg:px-8">{children}</main>
+        <main className="py-6 px-4 sm:px-6 lg:px-8  mt-10">{children}</main>
       </div>
     </div>
   );
